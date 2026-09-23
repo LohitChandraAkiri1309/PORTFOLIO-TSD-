@@ -1,0 +1,304 @@
+/* Basic settings */
+
+:root {
+    --primary-color: #a855f7;
+    --primary-hover: #9333ea;
+    --primary-glow: rgba(168, 85, 247, 0.2);
+    --primary-glow-focus: rgba(168, 85, 247, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+
+    background-color: #222;
+}
+
+nav h2 {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+
+/* Home */
+
+.hero {
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero h1 span {
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px;
+}
+
+
+/* Button */ 
+
+button {
+    padding: 12px 25px;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+
+/* Sections */
+
+section {
+    padding: 80px 50px;
+
+    text-align: center;
+
+    min-height: 400px;
+}
+
+section h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+
+/* Projects */
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #222;
+
+    width: 250px;
+
+    padding: 30px;
+
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.project h3 {
+    color: var(--primary-color);
+
+    margin-bottom: 15px;
+}
+
+
+/* Skills Section */
+
+#skills {
+    background-color: #181818;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background-color: #222;
+    width: 240px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 20px var(--primary-glow);
+}
+
+.skill-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Contact Section */
+
+#contact {
+    background-color: #222;
+}
+
+.contact-subtitle {
+    color: #aaa;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.contact-form {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: left;
+    background: #161616;
+    padding: 35px 40px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #242424;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px var(--primary-glow-focus);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.form-status {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+.form-status.success {
+    display: block;
+    background-color: rgba(0, 200, 83, 0.15);
+    border: 1px solid #00c853;
+    color: #00e676;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    background-color: #000;
+}
